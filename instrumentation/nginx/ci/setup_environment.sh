@@ -10,9 +10,6 @@ add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(
 apt-get update
 apt-get install --no-install-recommends --no-install-suggests -y \
   apt-transport-https ca-certificates curl gnupg-agent software-properties-common \
-  python3 esl-erlang elixir docker-ce docker-ce-cli containerd.io
+  python3 elixir erlang-syntax-tools docker-ce docker-ce-cli containerd.io erlang-dev docker-compose
+
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
-
-curl -L "https://github.com/docker/compose/releases/download/1.28.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-
-chmod +x /usr/local/bin/docker-compose
